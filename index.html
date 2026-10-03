@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEase - E-Commerce Website</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="#">
+                ShopEase
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarContent"
+                aria-controls="navbarContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+
+                <ul class="navbar-nav me-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">
+                            Products
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Categories
+                        </a>
+                    </li>
+
+                </ul>
+
+                <!-- Search -->
+                <form class="d-flex me-3" id="searchForm">
+
+                    <input
+                        id="searchInput"
+                        class="form-control me-2"
+                        type="search"
+                        placeholder="Search products"
+                        aria-label="Search products">
+
+                    <button
+                        class="btn btn-outline-light"
+                        type="submit">
+                        Search
+                    </button>
+
+                </form>
+
+                <!-- Cart -->
+                <button
+                    class="btn btn-outline-light"
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#cartModal">
+
+                    Cart 🛒
+                    <span class="badge bg-danger">0</span>
+
+                </button>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+        <div class="container text-center">
+
+            <h1>Welcome to ShopEase</h1>
+
+            <p>
+                Find amazing products at affordable prices.
+            </p>
+
+            <a href="#products" class="btn btn-primary">
+                Shop Now
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section id="products" class="container py-5">
+
+        <h2 class="text-center mb-4">
+            Featured Products
+        </h2>
+
+
+        <!-- ================= CATEGORIES ================= -->
+
+       <div class="text-center mb-5">
+
+    <button
+        class="btn btn-primary m-1 category-btn"
+        data-category="all">
+        All
+    </button>
+
+    <button
+        class="btn btn-outline-primary m-1 category-btn"
+        data-category="electronics">
+        Electronics
+    </button>
+
+    <button
+        class="btn btn-outline-primary m-1 category-btn"
+        data-category="gaming">
+        Gaming
+    </button>
+
+    <button
+        class="btn btn-outline-primary m-1 category-btn"
+        data-category="accessories">
+        Accessories
+    </button>
+
+</div>
+
+
+        <!-- ================= PRODUCT CAROUSEL ================= -->
+
+        <div
+            id="productCarousel"
+            class="carousel slide mb-5"
+            data-bs-ride="carousel">
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80"
+                        class="d-block w-100 carousel-image"
+                        alt="Headphones">
+
+                </div>
+
+                <div class="carousel-item">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80"
+                        class="d-block w-100 carousel-image"
+                        alt="Smart Watch">
+
+                </div>
+
+                <div class="carousel-item">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=1200&q=80"
+                        class="d-block w-100 carousel-image"
+                        alt="Gaming Mouse">
+
+                </div>
+
+            </div>
+
+            <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#productCarousel"
+                data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"></span>
+
+                <span class="visually-hidden">
+                    Previous
+                </span>
+
+            </button>
+
+            <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#productCarousel"
+                data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"></span>
+
+                <span class="visually-hidden">
+                    Next
+                </span>
+
+            </button>
+
+        </div>
+
+
+        <!-- ================= PRODUCT CARDS ================= -->
+
+        <div class="row g-4">
+
+
+            <!-- PRODUCT 1 -->
+
+            <div class="col-lg-3 col-md-6 product-item" data-category="electronics">
+
+                <div class="card product-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+                        class="card-img-top product-img"
+                        alt="Wireless Headphones">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-primary">
+                            Electronics
+                        </span>
+
+                        <h5 class="card-title mt-2">
+                            Wireless Headphones
+                        </h5>
+
+                        <p class="rating">
+                            ⭐⭐⭐⭐⭐
+                        </p>
+
+                        <p class="card-text">
+                            Premium wireless headphones
+                            with high-quality sound.
+                        </p>
+
+                        <h5>₹1,999</h5>
+
+                        <button
+                            class="btn btn-primary w-100 add-to-cart">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+
+            <div class="col-lg-3 col-md-6 product-item" data-category="gaming">
+
+                <div class="card product-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=600&q=80"
+                        class="card-img-top product-img"
+                        alt="Gaming Mouse">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-danger">
+                            Gaming
+                        </span>
+
+                        <h5 class="card-title mt-2">
+                            Gaming Mouse
+                        </h5>
+
+                        <p class="rating">
+                            ⭐⭐⭐⭐☆
+                        </p>
+
+                        <p class="card-text">
+                            High precision gaming mouse
+                            with fast response.
+                        </p>
+
+                        <h5>₹1,499</h5>
+
+                        <button
+                            class="btn btn-primary w-100 add-to-cart">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 3 -->
+
+            <div class="col-lg-3 col-md-6 product-item" data-category="accessories">
+
+                <div class="card product-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80"
+                        class="card-img-top product-img"
+                        alt="Smart Watch">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-success">
+                            Accessories
+                        </span>
+
+                        <h5 class="card-title mt-2">
+                            Smart Watch
+                        </h5>
+
+                        <p class="rating">
+                            ⭐⭐⭐⭐⭐
+                        </p>
+
+                        <p class="card-text">
+                            Modern smartwatch with
+                            fitness tracking.
+                        </p>
+
+                        <h5>₹2,499</h5>
+
+                        <button
+                            class="btn btn-primary w-100 add-to-cart">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 4 -->
+
+            <div class="col-lg-3 col-md-6 product-item" data-category="gaming">
+
+                <div class="card product-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=600&q=80"
+                        class="card-img-top product-img"
+                        alt="Mechanical Keyboard">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-warning text-dark">
+                            Gaming
+                        </span>
+
+                        <h5 class="card-title mt-2">
+                            Mechanical Keyboard
+                        </h5>
+
+                        <p class="rating">
+                            ⭐⭐⭐⭐☆
+                        </p>
+
+                        <p class="card-text">
+                            Mechanical keyboard designed
+                            for gaming and productivity.
+                        </p>
+
+                        <h5>₹2,999</h5>
+
+                        <button
+                            class="btn btn-primary w-100 add-to-cart">
+                            Add to Cart
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CART MODAL ================= -->
+
+    <div
+        class="modal fade"
+        id="cartModal"
+        tabindex="-1"
+        aria-labelledby="cartModalLabel"
+        aria-hidden="true">
+
+        <div class="modal-dialog modal-lg">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5
+                        class="modal-title"
+                        id="cartModalLabel">
+                        Shopping Cart 🛒
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close">
+                    </button>
+
+                </div>
+
+
+                <div class="modal-body">
+
+                    <div id="cartItems">
+
+                        <p class="text-center text-muted">
+                            Your cart is empty.
+                        </p>
+
+                    </div>
+
+                    <hr>
+
+                   <div class="d-flex justify-content-between">
+
+    <h5>
+        Total:
+    </h5>
+
+    <h5>
+        ₹<span id="cartTotal">0</span>
+    </h5>
+
+</div>
+
+<div class="text-end mt-3">
+    <button
+        type="button"
+        class="btn btn-danger"
+        id="clearCart">
+        Clear Cart
+    </button>
+</div>
+
+                </div>
+
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                        Close
+                    </button>
+
+                   <button
+    type="button"
+    class="btn btn-success"
+    data-bs-toggle="modal"
+    data-bs-target="#checkoutModal">
+    Checkout
+</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= CHECKOUT MODAL ================= -->
+
+<div
+    class="modal fade"
+    id="checkoutModal"
+    tabindex="-1"
+    aria-labelledby="checkoutModalLabel"
+    aria-hidden="true">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5
+                    class="modal-title"
+                    id="checkoutModalLabel">
+                    Checkout
+                </h5>
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close">
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <form id="checkoutForm">
+
+                    <div class="mb-3">
+
+                        <label
+                            for="customerName"
+                            class="form-label">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="customerName"
+                            placeholder="Enter your name">
+
+                    </div>
+
+
+                    <div class="mb-3">
+
+                        <label
+                            for="customerEmail"
+                            class="form-label">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="customerEmail"
+                            placeholder="Enter your email">
+
+                    </div>
+
+
+                    <div class="mb-3">
+
+                        <label
+                            for="customerPhone"
+                            class="form-label">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            class="form-control"
+                            id="customerPhone"
+                            placeholder="Enter your phone number">
+
+                    </div>
+
+
+                    <div class="mb-3">
+
+                        <label
+                            for="customerAddress"
+                            class="form-label">
+                            Address
+                        </label>
+
+                        <textarea
+                            class="form-control"
+                            id="customerAddress"
+                            rows="3"
+                            placeholder="Enter your address">
+                        </textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-success w-100">
+                        Place Order
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="bg-dark text-white text-center py-4">
+
+        <p class="mb-0">
+            © 2026 ShopEase. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Our JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

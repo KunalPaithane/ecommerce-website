@@ -1,0 +1,142 @@
+/* ===============================
+   GENERAL
+================================ */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+
+/* ===============================
+   NAVBAR
+================================ */
+
+.navbar-brand {
+    font-size: 24px;
+}
+
+
+/* ===============================
+   HERO SECTION
+================================ */
+
+.hero {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #212529, #495057);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+
+/* ===============================
+   PRODUCT CAROUSEL
+================================ */
+
+.carousel-image {
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* ===============================
+   PRODUCT CARDS
+================================ */
+
+.product-card {
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.rating {
+    font-size: 16px;
+}
+
+
+/* ===============================
+   CATEGORY BUTTONS
+================================ */
+
+.category-btn {
+    min-width: 110px;
+}
+
+
+/* ===============================
+   CART
+================================ */
+
+#cartItems {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+
+/* ===============================
+   FOOTER
+================================ */
+
+footer {
+    margin-top: 50px;
+}
+
+
+/* ===============================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 70px 15px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .carousel-image {
+        height: 250px;
+    }
+
+    .product-img {
+        height: 200px;
+    }
+
+    .category-btn {
+        min-width: auto;
+    }
+}
